@@ -53,15 +53,8 @@ public class MainActivity extends ActionBarActivity {
         Cursor c=myDB.getAllRows();
         c.moveToLast();
         ChatBox.append("Rohit [" + c.getString(DBAdapter.COL_Timestamp) + "]:" +c.getString(DBAdapter.COL_Message) + "\n");
-        ChatBox.append(displayRecordSet(c));
         c.close();
-        //ChatBox.append("Stock: " + textEntered.getText() + "    ");
-        //StockModel wm=new StockModel();
-        //enableStrictMode();
-        //wm.doSearch(textEntered.getText().toString());
-        //System.out.println(wm.getCurrentPrice());
-        //ChatBox.append("Price: " + wm.getCurrentPrice() + "\n");
-        //textEntered.setText("");
+
     }
     private String displayRecordSet(Cursor c){
         String s="";
